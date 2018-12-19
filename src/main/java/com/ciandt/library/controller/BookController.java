@@ -68,4 +68,9 @@ public class BookController {
         repository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @DeleteMapping
+    public void delete(){
+        repository.deleteAll();
+    }
 }
