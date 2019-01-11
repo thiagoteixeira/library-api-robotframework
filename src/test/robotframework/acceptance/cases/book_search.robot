@@ -6,6 +6,7 @@ Resource         ../resources/book_resource.robot
 *** Test Case ***
 
 Scenario: Get books successfully
+    [Setup]                               Delete all books
     Given A book created
     When Send a get request
     Then The service must return books
